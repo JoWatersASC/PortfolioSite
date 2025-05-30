@@ -14,18 +14,28 @@ const Sbutton = styled(Button)(({theme}) => ({
   color: '#A4A4A4'
 }));
 
+type SbuttonData = {
+  link: string,
+  icon: React.ReactNode
+}
+
 type SocialsProps = { space: number }
 const Socials: React.FC<SocialsProps> = ({ space = 2 }) => {
-  const gh_link: string = "https://github.com/JoWatersASC"
-  const li_link: string = "https://linkedin.com/in/joshua-b-waters"
-  const email_a: string = "j.b.waters365@gmail.com"
+  const buttons: SbuttonData[] = [
+    { link: "https://github.com/JoWatersASC",          icon: <GHIcon sx={{ fontSize: '3em'}} /> },
+    { link: "https://linkedin.com/in/joshua-b-waters", icon: <LIIcon sx={{ fontSize: '3em'}} /> },
+    { link: "j.b.waters365@gmail.com",                 icon: <EMIcon sx={{ fontSize: '3em'}} /> }
+  ]
+
+  let num = 0;
+  const buttonList: React.ReactNode[] = buttons.map(button => 
+    <Sbutton variant='outlined' href={button.link} key={++num}> {button.icon} </Sbutton>
+  )
 
   return (
     <div>
       <Stack spacing={space} direction='row'>
-        <Sbutton variant='outlined' href={gh_link}><GHIcon sx={{ fontSize: '3em'}} /></Sbutton>
-        <Sbutton variant='outlined' href={li_link}><LIIcon sx={{ fontSize: '3em'}}/></Sbutton>
-        <Sbutton variant='outlined' href={email_a}><EMIcon sx={{ fontSize: '3em'}}/></Sbutton>
+        {buttonList}
       </Stack>
     </div>
   )
