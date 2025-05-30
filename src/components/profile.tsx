@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import Socials from './socials'
 
 const Profile = () => {
-  const pfp = '../assets/react.svg'
+  const pfp: string = '../assets/react.svg'
 
   return (
     <>
