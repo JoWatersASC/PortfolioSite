@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# build output
+/build
+/dist
+
+# misc
+.env
+.env.*.local
+.DS_Store
+*.log
+npm-debug.log*
+
+# IDE files
+.vscode
+.idea
+
+# local cache
+.cache
+.eslintcache
+
