@@ -29,12 +29,12 @@ const InfoSection = () => {
       <Stack direction='column' spacing={5}>
         <Typography variant="h5" fontWeight="bold">About Me</Typography>
         <Box>
-          <Typography variant="h5">Skills</Typography>
+          <Typography variant="h5" fontWeight="bold">Skills</Typography>
           <Stack direction='column' spacing={2}>
             {skillSection}
           </Stack>
         </Box>
-          <Typography variant="h5">Experience</Typography>
+          <Typography variant="h5" fontWeight="bold">Projects & Experience</Typography>
       </Stack>
     </>
   )
