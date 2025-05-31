@@ -2,13 +2,15 @@
   max-width: 1280px;
   margin-left: 4rem;
   margin-top: 3rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .card {
   padding: 2em;
 }
 
-body {
+html, body {
   margin-right: 0;
+  overflow: hidden;
+  height: 100%
 }
