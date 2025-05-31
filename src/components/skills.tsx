@@ -16,7 +16,7 @@ const SkillArea: React.FC<SkillAreaProps> = ({ sName, sColor = '#AFAFAF', skills
         backgroundColor: sColor, 
         color: textColor,
         flexShrink: 0
-    }} borderRadius='999px' paddingX='.75em' paddingY='.25em' key={++num} fontWeight="bold">
+    }} borderRadius='999px' paddingX='.75em' paddingY='.15em' key={++num} fontWeight="bold">
         {skill}
     </Typography>
   );
@@ -24,7 +24,7 @@ const SkillArea: React.FC<SkillAreaProps> = ({ sName, sColor = '#AFAFAF', skills
   return (
     <>
       <Stack direction='column' spacing={.25}>
-        <Typography variant='h6' fontWeight='bold'>{sName}</Typography>
+        <Typography variant='h6' >{sName}</Typography>
 
         <Stack direction="row"
           spacing={1}
