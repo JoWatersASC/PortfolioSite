@@ -5,6 +5,7 @@ type SkillAreaProps = {
   sColor?: string,
   skills: string[],
 }
+
 const SkillArea: React.FC<SkillAreaProps> = ({ sName, sColor = '#AFAFAF', skills}) => {
   const skillList = skills.map(skill =>
     <Typography sx={{ backgroundColor: sColor }} borderRadius='999px' paddingX='1em' paddingY='.5em'>
@@ -25,7 +26,7 @@ const SkillArea: React.FC<SkillAreaProps> = ({ sName, sColor = '#AFAFAF', skills
           }}>{skillList}</Stack>
       </Stack>
     </>
-  ) 
+  )
 }
 
 export default SkillArea
